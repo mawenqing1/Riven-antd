@@ -1,3 +1,5 @@
+import React from "react"
+
 enum ButtonSize {
     Large = 'lg',
     Small = 'sm'
@@ -19,9 +21,13 @@ export interface BaseButtonProps {
     href?: string
 }
 
+type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>
 
+type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>
+
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
 export {
     ButtonSize,
-    ButtonType
+    ButtonType,
 }

@@ -1,19 +1,21 @@
 import React, {FC} from 'react';
-import { BaseButtonProps, ButtonType } from '../../types/button/button';
+import { BaseButtonProps, ButtonType, ButtonProps } from '../../types/button/button';
 import classNames from 'classnames';
 import './button'
 
-const Button: FC<BaseButtonProps> = (props) => {
+const Button: FC<ButtonProps> = (props) => {
   const {
     btnType,
     disabled,
     size,
     children,
-    href
+    href,
+    className,
+    ...restProps
   } = props
 
   //btn, btn-lg, btn-primary
-  const classes = classNames('btn', {
+  const classes = classNames('btn', className, {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
     'disabled': (btnType === ButtonType.Link) && disabled
@@ -24,6 +26,7 @@ const Button: FC<BaseButtonProps> = (props) => {
       <a
         className={classes}
         href={href}
+        {...restProps}
       >
         {children}
       </a>
@@ -33,6 +36,7 @@ const Button: FC<BaseButtonProps> = (props) => {
       <button
         className={classes}
         disabled={disabled}
+        {...restProps}
       >
         {children}
       </button>

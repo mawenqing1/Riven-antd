@@ -8,6 +8,8 @@ function App() {
       <header className="App-header">
         <Button disabled>hello</Button>
         <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>hello</Button>
+        <Button btnType={ButtonType.Danger} size={ButtonSize.Large}>hello</Button>
+        <Button btnType={ButtonType.Default} size={ButtonSize.Large}>hello</Button>
         <Button btnType={ButtonType.Link} href='http://www.baidu.com' size={ButtonSize.Large} disabled>baidu Link</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
