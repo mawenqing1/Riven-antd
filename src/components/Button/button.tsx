@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
-import { BaseButtonProps, ButtonType, ButtonProps } from '../../types/button/button';
+import { ButtonProps } from '../../types/button/button';
 import classNames from 'classnames';
-import './button'
 
 const Button: FC<ButtonProps> = (props) => {
   const {
@@ -18,10 +17,10 @@ const Button: FC<ButtonProps> = (props) => {
   const classes = classNames('btn', className, {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
-    'disabled': (btnType === ButtonType.Link) && disabled
+    'disabled': (btnType === 'link') && disabled
   })
 
-  if(btnType === ButtonType.Link && href) {
+  if(btnType === 'link' && href) {
     return(
       <a
         className={classes}
@@ -46,7 +45,7 @@ const Button: FC<ButtonProps> = (props) => {
 
 Button.defaultProps = {
   disabled:false,
-  btnType: ButtonType.Default
+  btnType: 'default'
 }
 
 export default Button

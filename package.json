@@ -21,6 +21,7 @@
     "babel-plugin-named-asset-import": "^0.3.7",
     "babel-preset-react-app": "^10.0.0",
     "bfj": "^7.0.2",
+    "browser-resolve": "^2.0.0",
     "camelcase": "^6.1.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "classnames": "^2.3.1",
@@ -42,7 +43,7 @@
     "html-webpack-plugin": "4.5.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "26.6.0",
-    "jest-circus": "26.6.0",
+    "jest-circus": "^27.3.0",
     "jest-resolve": "26.6.0",
     "jest-watch-typeahead": "0.6.1",
     "less": "^4.1.2",
@@ -61,6 +62,7 @@
     "react-dev-utils": "^11.0.3",
     "react-dom": "^17.0.2",
     "react-refresh": "^0.8.3",
+    "react-scripts": "^4.0.3",
     "resolve": "1.18.1",
     "resolve-url-loader": "^3.1.2",
     "sass-loader": "^10.0.5",
@@ -121,7 +123,7 @@
       "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ],
     "testEnvironment": "jsdom",
-    "testRunner": "D:\\riven\\node_modules\\jest-circus\\runner.js",
+    "testRunner": "D:\\riven\\Riven-antd\\node_modules\\jest-circus\\runner.js",
     "transform": {
       "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.js",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
