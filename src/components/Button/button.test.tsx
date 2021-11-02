@@ -43,11 +43,11 @@ describe('test Button component', () => {
         expect(element).toHaveClass('btn btn-link');
     })
     test('should render disabled button when disabled set to true', () => {
-        const wrapper = render(<Button {...disabledProps}>OK</Button>);
-        const element = wrapper.getByText('OK') as HTMLButtonElement;
+        const wrapper = render(<Button {...disabledProps}>hello</Button>);
+        const element = wrapper.getByText('hello') as HTMLButtonElement;
         expect(element).toBeInTheDocument();
         expect(element.disabled).toBeTruthy();
         fireEvent.click(element);
-        expect(defaultProps.onClick).toHaveBeenCalled();
+        expect(disabledProps.onClick).not.toHaveBeenCalled();
     })
 })
